@@ -1,6 +1,8 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
+// Globale Variable
+// Wird außerhalb von Funktionen verwendet
 constexpr int VALUE = 2;
 
 int func(const int val)
@@ -12,7 +14,7 @@ int func(const int val)
 
 int main()
 {
-    constexpr int v = 2 * 3 * 5;
+    constexpr int v = 2 * 3 * 5; // Wert der Konstante wird während der Kompilierung schon berechnet und mit 30 gespeichert werden
     std::cout << func(v) << '\n';
 
     return 0;

@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> //OK
 
 void func(int val)
 {

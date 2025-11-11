@@ -1,4 +1,4 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
 int main()
@@ -6,24 +6,25 @@ int main()
     // bool: true/false
     // [0, 10]
 
-    std::uint32_t number;
-    std::cout << "Please enter your guess: ";
+    int number = 0;
+
+    std::cout << "Bitte rate eine Zahl zwischen 0 und 10: \n";
     std::cin >> number;
 
-    if ((number >= 0) && (number <= 10))
+    if (number >=0 && number <= 10) // TRUE-Zweig
     {
         if (number == 4)
         {
-            std::cout << "You won!\n";
+            std::cout << "You WON!!!!\n";
         }
         else
         {
-            std::cout << "You lost!\n";
+            std::cout << "You lost :(\n";
         }
     }
-    else
+    else // FALSE-Zweig
     {
-        std::cout << "You entered an invalid number!\n";
+        std::cout << "Es sind nur Zahlen von 0 bis 10 möglich!\nBitte korrigiere die Eingabe.\n";
     }
 
     return 0;

@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> //OK
 
 int main()
 {
@@ -15,7 +15,7 @@ int main()
     std::cout << "P points to the address: " << p << "\n";
     std::cout << "The value of the address where p points to: " << *p << "\n";
 
-    delete p;
+    delete p; // Wert wird auf dem Heapspeicher gelöscht. ABER: Pointer zeigt weiterhin darauf!!! --> ERROR
 
     return 0;
 }

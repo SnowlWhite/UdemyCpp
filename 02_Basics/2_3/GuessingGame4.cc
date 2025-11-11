@@ -1,41 +1,40 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
 int main()
 {
-    std::uint32_t max_number_of_attempts = 3;
+    int number = 0;
+    int max_durchlauf = 3; // User hat 3 Versuche richtig zu raten
 
-    std::cout << "Welcome to my Guessing-Game!" << std::endl;
-    std::cout << "You have to guess the correct number between [0, 10]!"
-              << std::endl;
+    std::cout << "Willkommen im Spiel!!!" << std::endl;
+    std::cout << "Rate eine Zahl zwischen 0 und 10. Du hast 3 Versuche." << std::endl;
 
-    for (std::uint32_t current_number_of_attempts = 0;
-         current_number_of_attempts < max_number_of_attempts;
-         current_number_of_attempts++)
+    for( int rateversuche = 0; rateversuche < max_durchlauf; rateversuche++) // Maximale Durchläufe
     {
-        std::uint32_t number = 0U;
-        std::cout << "Please enter your guess: ";
-        std::cin >> number;
 
-        if ((number >= 0) && (number <= 10))
-        {
-            if (number == 4)
+            std::cout << "Please enter your guess: ";
+            std::cin >> number;
+
+            if ((number >= 0) && (number <= 10))
             {
-                std::cout << "You won!" << std::endl;
-            }
-            else if (number == 2)
-            {
-                std::cout << "You won wooden spoon!" << std::endl;
+                if (number == 4)
+                {
+                    std::cout << "You won!" << std::endl;
+                }
+                else if (number == 2)
+                {
+                    std::cout << "You won wooden spoon!" << std::endl;
+                }
+                else
+                {
+                    std::cout << "You lost!" << std::endl;
+                }
             }
             else
             {
-                std::cout << "You lost!" << std::endl;
+                std::cout << "You entered an invalid number!" << std::endl;
             }
-        }
-        else
-        {
-            std::cout << "You entered an invalid number!" << std::endl;
-        }
+
     }
 
     return 0;

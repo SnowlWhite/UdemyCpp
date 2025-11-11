@@ -1,17 +1,18 @@
-#include <iostream>
+#include <iostream> //OK
 
-// &: Reference
-// *p: De-reference
+// &:  Speicheradresse
+// *p: Wert anzeigen
 
 int main()
 {
+
     int number = 5;
-    std::cout << "Value of number: " << number << '\n';
-    std::cout << "Address of number: " << &number << '\n'; // 3c
+    std::cout << "Wert number: " << number << std::endl;
+    std::cout << "Adresse number: " << &number << std::endl; //1c
 
     int *p = &number;
-    std::cout << "Value of p: " << p << '\n';                              // 3c
-    std::cout << "Value of the mem addr that p points to: " << *p << '\n'; // 3c
+    std::cout << "Wert p: " << p << std::endl; //1c
+    std::cout << "Wert auf den p zeigt: " << *p << std::endl;
 
     return 0;
 }

@@ -1,22 +1,27 @@
-#include <iostream>
+#include <iostream> //OK
 
 int main()
 {
-    // 1 Byte
+    // Ganzzahlige Datentypen
+
+    // 1 Byte (1 Wert kann gespeichert werden)
     bool my_bool1 = true;
     bool my_bool2 = false;
 
-    // 1 Byte = 8 Bit (2^8 = 256)
+    // 1 Byte = 8 Bit (2^8 = 256 Werte)
     char my_char = 10;
 
-    // 2 Byte = 16 Bit (2^16 ~ 65.000)
+    // 2 Byte = 16 Bit (2^16 ~ 65.000 Werte)
     short my_short = 300;
 
-    // 4 Byte = 32 Bit (2^32 ~ 4.000.000.000)
+    // 4 Byte = 32 Bit (2^32 ~ 4.000.000.000 Werte)
     int my_int = 100'000;
 
     // 8 Byte = 64 Bit (2^64)
     long long my_ll = 5'000'000'000;
+
+
+    // Fließkommazahlen
 
     // 4 Byte = 32 Bit
     float my_float = 10.0;

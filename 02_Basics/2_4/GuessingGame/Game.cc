@@ -1,8 +1,9 @@
 #include <cstdint>
 #include <iostream>
 
-#include "Game.h"
+#include "Game.h" // Zusammen bilden sie eine Compilation Unit (Werden zusammen kompiliert)
 
+// Definition
 void game()
 {
     bool has_won = false;
@@ -15,7 +16,7 @@ void game()
         std::cout << "Please enter your number: ";
         std::cin >> number;
 
-        if (number >= 0 && number <= 10)
+        if (number > 0 && number <= 10)
         {
             if (number == 4)
             {

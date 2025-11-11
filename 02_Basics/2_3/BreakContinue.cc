@@ -1,4 +1,4 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
 int main()
@@ -13,13 +13,13 @@ int main()
 
         if (input < 0)
         {
-            std::cout << "Canceled while loop!" << std::endl;
-            break;    // beendet die komplette schleife
-            continue; // beendet aktuellen durchlauf
+            std::cout << "Keine negativen Werte zulässig. Die Schleife wurde beendet!";
+            break;    // Beendet die komplette Schleife
+            continue; // Beendet den aktuellen Durchlauf
         }
 
         sum += input;
-    } while (true); // unendliche schleife
+    } while (true); // Immer TRUE --> Unendliche Schleife
 
     return 0;
 }

@@ -1,27 +1,36 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
-std::int32_t user_input()
+// Funktion: Usereingabe
+int user_input() // Funktion erwartet keinen Wert, da der User ihn über die Konsole erfassen soll
 {
-    std::int32_t number = 0;
+    int input_number = 0;
     std::cout << "Please enter a number: ";
-    std::cin >> number;
+    std::cin >> input_number;
 
-    return number;
+    return input_number;
 }
 
-bool is_even(std::int32_t number)
+// Funktion: Ist Zahl gerade?
+bool is_even(int even_number) // Funktion erwartet einen Integer, der mitgegeben wird!
 {
-    return number % 2 == 0;
+    if(even_number % 2 == 0) //Returntyp ist ein Bool
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 int main()
 {
-    std::int32_t user_number = user_input();
+    int user_number = user_input();
     std::cout << user_number << '\n';
 
     bool result = is_even(user_number);
-    std::cout << "Is Even? " << std::boolalpha << result << '\n';
+    std::cout << "Ist die Zahl gerade? " << std::boolalpha << result << "\n";
 
     return 0;
 }

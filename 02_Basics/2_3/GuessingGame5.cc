@@ -1,17 +1,15 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
 int main()
 {
+    int number = 0;
     bool has_won = false;
 
-    std::cout << "Welcome to my Guessing-Game!" << std::endl;
-    std::cout << "You have to guess the correct number between [0, 10]!"
-              << std::endl;
+    std::cout << "Willkommen im Spiel!!!" << std::endl;
 
     do
     {
-        std::uint32_t number = 0U;
         std::cout << "Please enter your guess: ";
         std::cin >> number;
 
@@ -19,7 +17,7 @@ int main()
         {
             if (number == 4)
             {
-                std::cout << "You won!" << std::endl;
+                std::cout << "Gewonnen! Das Spiel ist beendet." << std::endl;
                 has_won = true;
             }
             else if (number == 2)
@@ -35,7 +33,8 @@ int main()
         {
             std::cout << "You entered an invalid number!" << std::endl;
         }
-    } while (!has_won);
+
+    } while(!has_won);
 
     return 0;
 }

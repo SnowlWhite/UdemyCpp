@@ -1,9 +1,9 @@
-#include <iostream>
+#include <iostream> //OK
 
 int main()
 {
-    auto a = 12U;
-    auto b = static_cast<float>(a);
+    int a = 12;
+    auto b = static_cast<float>(a); // auto wird automatisch durch float ersetzt
 
     auto c = 12.3F;
     auto d = static_cast<float>(c);

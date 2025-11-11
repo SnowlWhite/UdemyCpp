@@ -1,6 +1,11 @@
-#include <array>
+#include <array> //OK
 #include <cstdint>
 #include <iostream>
+
+// In C++ gibt es folgende Arrays:
+// Std array --> constant
+// Std string --> dynamisch (nur Chars)
+// Std vector --> dynamisch (alle Datentypen)
 
 template <std::size_t N>
 void print_array(const std::array<std::int32_t, N> arr)

@@ -1,18 +1,18 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
 int main()
 {
-    std::int32_t sum = 10;
+    int sum = 10;
 
-    do
+    do // Schleife wird erst ausgeführt
     {
         std::cout << "\nCurrent Sum: " << sum << " Enter the next value: ";
-        std::int32_t input = 0;
+        int input = 0;
         std::cin >> input;
 
         sum += input;
-    } while (sum < 10);
+    } while (sum < 10); // Überprüfung findet erst am Ende statt, ob ein erneuter Durchlauf stattfindet
 
     return 0;
 }

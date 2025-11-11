@@ -1,1 +1,2 @@
+// Deklaration
 void game();

@@ -1,4 +1,4 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
 std::int32_t user_input()
@@ -15,7 +15,7 @@ bool is_even(std::int32_t number)
     return number % 2 == 0;
 }
 
-void print_boolean_value(bool value)
+void print_boolean_value(bool value) // Es wird kein Wert zurückgegeben
 {
     std::cout << std::boolalpha << value;
 }

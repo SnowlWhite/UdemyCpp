@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> //OK
 
 int main()
 {
@@ -14,7 +14,7 @@ int main()
     int my_result3 = my_value1 * my_value2;
     std::cout << "multiplication: " << my_result3 << std::endl;
 
-    int my_result4 = my_value1 / my_value2;
+    int my_result4 = my_value1 / my_value2;   // 10/3=3,33333 --> Werte hinter Komma werden abgeschnitten
     std::cout << "division: " << my_result4 << std::endl;
 
     return 0;

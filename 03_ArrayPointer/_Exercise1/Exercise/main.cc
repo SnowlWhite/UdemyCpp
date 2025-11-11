@@ -1,31 +1,24 @@
 #include <cstdint>
-#include <iostream>
+#include <iostream> // OK
 
 #include "exercise.h"
 
 int main()
 {
-    // Exercise 1
+    // Längenvariable für Array erstellen
     constexpr auto array_length = std::size_t{100};
-    double array1[array_length] = {};
 
+    // Standard-Array anlegen
+    std::array<double, 100> array2;
+
+    // Befüllen von 0 bis 99
     for (std::size_t i = 0; i < array_length; i++)
     {
-        array1[i] = i;
+        array2[i] = static_cast<double>(i);
     }
 
-    // Exercise 2
-    auto sum = 0.0;
-
-    const auto sum = array_sum(array1, array_length);
-    std::cout << "(Exercise 2) Array Sum = " << sum << '\n';
-
-    // Exercise 3
-    std::array<double, 100> array2;
-    auto sum2 = 0.0;
-
     const auto sum2 = array_sum(array2);
-    std::cout << "(Exercise 2) Array Sum = " << sum << '\n';
+    std::cout << "(Exercise 3) Array Sum = " << sum2 << '\n';
 
     return 0;
 }

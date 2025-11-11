@@ -1,21 +1,21 @@
-#include <iostream>
+#include <iostream> //OK
 
-int main()
-{
+int main(){
+
     float my_value1 = 10.0;
     float my_value2 = 5.0;
 
-    float my_result1 = my_value1 + my_value2;
-    std::cout << "addition: " << my_result1 << std::endl;
+    float result_addition = my_value1 + my_value2; // Ergebnis der Rechnung wird abgespeichert
+    std::cout << "Addition: " << result_addition << std::endl;
 
-    float my_result2 = my_value1 - my_value2;
-    std::cout << "subtraction: " << my_result2 << std::endl;
+    float result_substraction = my_value1 + my_value2;
+    std::cout << "Substraction: " << result_substraction << std::endl;
 
-    float my_result3 = my_value1 * my_value2;
-    std::cout << "multiplication: " << my_result3 << std::endl;
+    float result_multiplication = my_value1 * my_value2;
+    std::cout << "Multiplication: " << result_multiplication << std::endl;
 
-    float my_result4 = my_value1 / my_value2;
-    std::cout << "division: " << my_result4 << std::endl;
+    float result_division = my_value1 / my_value2;
+    std::cout << "Division: " << result_division << std::endl;
 
     return 0;
 }

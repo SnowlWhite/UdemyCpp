@@ -1,23 +1,26 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
-std::int32_t user_input()
+//Funktion --> Eine Aufgabe pro Funktion
+// Returntyp Funktionsname (Parameterliste)
+int kleineFunktion()
 {
-    std::int32_t number = 0;
-    std::cout << "Please enter a number: ";
+    int number = 0;
+    std::cout << "Bitte gib eine Nummer ein: " << std::endl;
     std::cin >> number;
 
+    //Rückgabewert
     return number;
 }
 
 int main()
 {
-    std::int32_t n1 = user_input();
-    std::cout << n1 << '\n';
-    std::int32_t n2 = user_input();
-    std::cout << n2 << '\n';
-    std::int32_t n3 = user_input();
-    std::cout << n3 << '\n';
+
+    int n1 = kleineFunktion();
+    int n2 = kleineFunktion();
+    int n3 = kleineFunktion();
+    std::cout << "Du hast " << n1 << ", " << n2 << " und " << n3 << " eingegeben.\n";
+
 
     return 0;
 }

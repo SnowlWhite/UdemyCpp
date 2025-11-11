@@ -1,25 +1,28 @@
-#include <array>
+#include <array>  // OK
 #include <cstdint>
 #include <iostream>
 
+// Array soll ausgegeben werden
+// Template: Funktion allgemeingültig --> Länge N
 template <std::size_t N>
-void print_array(const std::array<std::int32_t, N> arr)
+void print_array(const std::array<std::size_t, N> arr)
 {
     for (std::size_t i = 0; i < arr.size(); i++)
     {
-        std::cout << arr[i] << '\n';
+        std::cout << arr[i] << "\n";
     }
 }
 
 int main()
 {
-    constexpr std::size_t arr_len1 = 4U;
-    const std::array<std::int32_t, arr_len1> arr1 = {1, 2, 3, 4};
-    print_array(arr1);
 
-    constexpr std::size_t arr_len2 = 6U;
-    const std::array<std::int32_t, arr_len2> arr2 = {1, 2, 3, 4, -1, -2};
-    print_array(arr2);
+    // Standard-Array anlegen
+    std::array<std::size_t, 4> array1 = {1, 2, 3, 4};
+    std::array<std::size_t, 6> array2 = {1, 2, 3, 4, 5, 6};
+
+    // Funktionsaufruf
+    print_array(array1);
+    print_array(array2);
 
     return 0;
 }

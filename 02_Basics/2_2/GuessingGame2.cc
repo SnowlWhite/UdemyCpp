@@ -1,4 +1,4 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
 // Greater Equal: >=
@@ -12,7 +12,7 @@
 
 int main()
 {
-    std::uint32_t number = 0U;
+    std::uint32_t number = 0;
     std::cout << "Please enter your guess: ";
     std::cin >> number;
 
@@ -22,9 +22,9 @@ int main()
         {
             std::cout << "You won!" << std::endl;
         }
-        else if (number == 2)
+        else if (number ==2)
         {
-            std::cout << "You won wooden spoon!" << std::endl;
+            std::cout << "Trostpreis gewonnen!" << std::endl;
         }
         else
         {

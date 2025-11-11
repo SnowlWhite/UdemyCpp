@@ -6,20 +6,20 @@ int main()
     char LEFT = 'a';
     char RIGHT = 'd';
 
-    char move;
-    std::cin >> move;
+    char input;
+    std::cin >> input;
 
-    if (LEFT == move)
+    if (input == LEFT)
     {
-        std::cout << "The player moved to the left!\n";
+        std::cout << "Schritt nach links!\n";
     }
-    else if (RIGHT == move)
+    else if (input == RIGHT)
     {
-        std::cout << "The player moved to the right!\n";
+        std::cout << "Schritt nach rechts!\n";
     }
     else
     {
-        std::cout << "Unrecognized move!\n";
+        std::cout << "Die Eingabe ist nicht erlaubt!\n";
     }
 
     return 0;

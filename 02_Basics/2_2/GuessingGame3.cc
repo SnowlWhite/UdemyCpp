@@ -1,9 +1,9 @@
-#include <cstdint>
+#include <cstdint> //OK
 #include <iostream>
 
 int main()
 {
-    std::uint32_t number = 0U;
+    std::uint32_t number = 0;
     std::cout << "Please enter your guess: ";
     std::cin >> number;
 
